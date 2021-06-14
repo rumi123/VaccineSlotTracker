@@ -3,7 +3,7 @@ const express = require("express");
 const https = require("https");
 const TelegramBot = require("node-telegram-bot-api");
 
-const token = "";
+const token = "1865450470:AAHBqyRRWGUXVbdOTA6zC5ETP28yIJYbfTQ";
 
 const bot = new TelegramBot(token, { polling: true });
 
@@ -30,14 +30,12 @@ pincodeList = [
   691537, 691020, 691509, 691503, 691505, 691508, 691572,
 ];
 
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, "0");
-var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
-var yyyy = today.getFullYear();
-dd = parseInt(dd);
-
 function slotTrack() {
   var today = new Date();
+  var dd = String(today.getDate()).padStart(2, "0");
+  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var yyyy = today.getFullYear();
+  dd = parseInt(dd);
   var hrs = today.getHours();
   var mins = today.getMinutes();
   var secs = today.getSeconds();
